@@ -5,8 +5,8 @@ export default axios.create({
     baseURL: 'https://www.googleapis.com/youtube/v3/',
     params: {
         part: 'snippet',
-        channelId: "UClc-WtzXW7a9hn1tflskRoA",
-        maxResults: 10,
+        channelId: "UCjg1YvYLP3KbPPdEZ57GJuA",
+        maxResults: 20,
         key: KEY
     }
 })
