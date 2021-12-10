@@ -1,4 +1,14 @@
 import React from 'react';
+import {
+    InputGroup,
+    Flex,
+    FormControl,
+    FormHelperText,
+    Input,
+    Button
+  } from '@chakra-ui/react';
+  import { SearchIcon } from '@chakra-ui/icons'
+
 
 class Searchbar extends React.Component {
     handleChange = (event) => {
@@ -15,17 +25,20 @@ class Searchbar extends React.Component {
     render() {
         
         return (
-            <>
-            <h2  style={{textAlign:"center"}}><img style={{width:'100%', height:'auto',justifyContent:'center'}} src='../../public/valobrain-banner.jpg' alt="youtube logo"></img></h2>
-            <div className='search-bar ui segment'>
-                <form onSubmit={this.handleSubmit} className='ui form'>
-                    <div className='field'>
-                        <label htmlFor="video-search">Busca el clip</label>
-                        <input onChange={this.handleChange} name='video-search' type="text" placeholder="Buscar..."/>
-                    </div>
+            <Flex justifyContent="center" pt="100px">
+                <form onSubmit={this.handleSubmit}>
+                    <FormControl>
+                        <InputGroup>
+                            <Input type='text' onChange={this.handleChange} placeholder="Buscar" />
+                            <Button type="submit"><SearchIcon w={6} h={6} /></Button>
+                        </InputGroup>
+                        <FormHelperText>Busca la micro por agente, equipo, habilidad o mapa</FormHelperText>
+                        
+                    </FormControl>
                 </form>
-            </div>
-            </>
+            </Flex>
+                
+            
         )
     }
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import VideoItem from './VideoItem';
+import { Box } from '@chakra-ui/react'
+
 
 const VideoList = ({videos , handleVideoSelect}) => {
     const renderedVideos =  videos.map((video) => {
@@ -7,6 +9,6 @@ const VideoList = ({videos , handleVideoSelect}) => {
         // console.log(video.id);
     });
 
-    return <div className='ui relaxed divided list'>{renderedVideos}</div>;
+    return <Box ms="100px">{renderedVideos}</Box>;
 };
 export default VideoList;
