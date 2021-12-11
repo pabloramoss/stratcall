@@ -1,5 +1,9 @@
 body {
   background-image: url('../assets/image-bg.jpg') !important;
-  background-position: fixed !important;
   color: white !important;
 }
+/* 
+.video-selected{
+  height: 500px;
+  width: 600px;
+} */

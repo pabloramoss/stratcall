@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Heading } from '@chakra-ui/react'
+import { Box, theme, Heading } from '@chakra-ui/react'
 
 export default function Navbar(){
 

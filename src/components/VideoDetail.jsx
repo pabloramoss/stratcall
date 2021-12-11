@@ -2,12 +2,7 @@ import React from "react";
 
 const VideoDetail = ({ video }) => {
   if (!video) {
-    return <div>
-       <p style={{fontSize:'25px'}}>
-              
-
-       </p>
-    </div>;
+    return <div></div>;
   }
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
@@ -15,11 +10,11 @@ const VideoDetail = ({ video }) => {
   return (
     <div>
       <div>
-        <iframe src={videoSrc} allowFullScreen title="Video player" />
+        <iframe width="800px" height="500px" src={videoSrc} allowFullScreen title="Video player" />
       </div>
       <div>
-        <h4>{video.snippet.title}</h4>
-        <p>{video.snippet.description}</p>
+        {/* <h4>{video.snippet.title}</h4>
+        <p>{video.snippet.description}</p> */}
       </div>
     </div>
   );
