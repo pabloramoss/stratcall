@@ -29,7 +29,7 @@ class Searchbar extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <FormControl>
                         <InputGroup>
-                            <Input type='text' onChange={this.handleChange} placeholder="Buscar" />
+                            <Input color="white" type='text' onChange={this.handleChange} placeholder="Buscar" />
                             <Button type="submit"><SearchIcon w={6} h={6} /></Button>
                         </InputGroup>
                         <FormHelperText>Busca la micro por agente, equipo, habilidad o mapa</FormHelperText>

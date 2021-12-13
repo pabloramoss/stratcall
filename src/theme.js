@@ -6,5 +6,9 @@ export default extendTheme({
   },
 	colors: {
 		primary: theme.colors.twitter
-	}
+	},
+  textStyles: {
+    color: red
+  }
+  
 });

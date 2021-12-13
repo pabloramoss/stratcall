@@ -5,7 +5,7 @@ export default function Navbar(){
 
   return (
     <Box backgroundColor="#FF4455">
-      <Heading as='h2' size='md' p="20px">VALO BRAIN</Heading>
+      <Heading color="white" as='h2' size='md' p="20px">VALO BRAIN</Heading>
     </Box>
 
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/video.css';
-import { Image, Heading, Flex, Box } from '@chakra-ui/react'
+import { Image, Heading, Flex, Box, Text } from '@chakra-ui/react'
 
 const VideoItem = ({video , handleVideoSelect}) => {
 
@@ -11,8 +11,8 @@ const VideoItem = ({video , handleVideoSelect}) => {
                 <Image cursor="pointer" src={video.snippet.thumbnails.medium.url} alt={video.snippet.description} borderRadius={8}/>
             </Box>
             <Box width="600px" ps="30px">
-                <Heading cursor="pointer" as='h2' fontSize="22px" pb="20px">{video.snippet.title}</Heading>
-                <p>{video.snippet.description}</p>
+                <Heading color="white" cursor="pointer" as='h2' fontSize="22px" pb="20px">{video.snippet.title}</Heading>
+                <Text color="white">{video.snippet.description}</Text>
             </Box>
         </Flex>
     )

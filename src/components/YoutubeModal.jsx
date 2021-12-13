@@ -13,6 +13,7 @@ import {
   Flex
 } from '@chakra-ui/react'
 import React, {useState} from 'react';
+import VideoList from './VideoList';
 
 function YoutubeModal({video}) {
   if (!video) {
@@ -20,7 +21,7 @@ function YoutubeModal({video}) {
   }
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
   const { isOpen, onOpen, onClose } = useDisclosure();
-
+  console.log(video);
 
   return (
     <Box>
@@ -33,17 +34,9 @@ function YoutubeModal({video}) {
           <ModalCloseButton />
         <Flex align="end">
           <ModalBody>
-            <div>hola mundo</div>
             <iframe width="900px" height="500px" src={videoSrc} allowFullScreen title="Video player" />
           </ModalBody>
         </Flex>
-
-          {/* <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant='ghost'>Secondary Action</Button>
-          </ModalFooter> */}
         </ModalContent>
       </Modal>
     </Box>
