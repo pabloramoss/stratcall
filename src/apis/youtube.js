@@ -6,7 +6,7 @@ export default axios.create({
     params: {
         part: 'snippet',
         channelId: "UCjg1YvYLP3KbPPdEZ57GJuA",
-        maxResults: 20,
+        maxResults: 50,
         key: KEY
     }
 })

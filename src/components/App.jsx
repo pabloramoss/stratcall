@@ -4,9 +4,11 @@ import youtube from '../apis/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 import Navbar from './Navbar';
-import { ChakraProvider, theme, Button, } from '@chakra-ui/react';
+import { ChakraProvider, theme, Heading, Button, Box, Flex, Text } from '@chakra-ui/react';
 import '../style/index.css';
 import YoutubeModal from './YoutubeModal';
+import ModalTest from './ModalTest';
+import Footer from './Footer';
 
 
 
@@ -32,12 +34,13 @@ class App extends React.Component {
     }
     render() {
         return (
-            <ChakraProvider theme={theme}>
+            <ChakraProvider theme={theme} >
+                <Box>
                 <Navbar />
                 <SearchBar handleFormSubmit={this.handleSubmit}/>
-                <YoutubeModal video={this.state.selectedVideo}/>
-                <VideoDetail video={this.state.selectedVideo}/>
                 <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
+                </Box>
+                <Footer />
             </ChakraProvider>
             
         )
