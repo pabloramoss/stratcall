@@ -10,7 +10,8 @@ import YoutubeModal from './YoutubeModal';
 import ModalTest from './ModalTest';
 import Footer from './Footer';
 import Donation from './Donation';
-import NewVideosList from './NewVideosList';
+import NewVideoListTest from './NewVideoListTest';
+import ContactMe from './ContactMe';
 
 
 
@@ -42,7 +43,7 @@ class App extends React.Component {
                 <SearchBar handleFormSubmit={this.handleSubmit}/>
                 <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
                 </Box>
-                <NewVideosList />
+                <ContactMe />
                 {/* <Donation /> */}
                 <Footer />
             </ChakraProvider>

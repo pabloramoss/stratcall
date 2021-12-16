@@ -38,7 +38,6 @@ const NewVideosList = () => {
       <Heading>
         {res.data.items[0].snippet.title}
       </Heading>
-
       </Box>
     </Flex>
   );
