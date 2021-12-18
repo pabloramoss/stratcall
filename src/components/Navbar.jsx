@@ -24,7 +24,7 @@ export default function Navbar(){
       <Link as={RouterLink} to="/" _hover={{textDecoration:"none"}}>
       <Heading mx="10px" cursor="pointer" color="white" size='sm' p="20px">Inicio</Heading>
       </Link>
-      <Link _hover={{textDecoration:"none"}}>
+      <Link as={RouterLink} to="/contact" _hover={{textDecoration:"none"}}>
       <Heading mx="10px" cursor="pointer" color="white" size='sm' p="20px">Contacto</Heading>
       </Link>
       <Link as={RouterLink} to="/donation" me="20px" _hover={{textDecoration:"none"}}>

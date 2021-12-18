@@ -1,16 +1,17 @@
 import React from "react";
 import { Link, Image, Flex, Spacer, Text } from '@chakra-ui/react';
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 
 function Donation(){
 
   return(
-    <>
+    <Flex direction="column" height="100vh">
       <Navbar />
-      <Flex pt="250px" justifyContent="center">
+      <Flex pt="150px" justifyContent="center">
         <Flex direction="column" justifyContent="center" alignItems="center" my="50px" bgColor="white" width="600px" height="400px" borderRadius="30px">
-          <Text width="450px">Si quieres apoyar a Valo Brain puedes hacerlo a través de donaciones<br />
+          <Text width="450px">Si quieres apoyar a Valo Brain puedes hacerlo a través de donaciones mediante MercadoPago (Argentina) o con Paypal.<br />
           ¡Muchas gracias por pasarte!
           </Text>
           <Flex my="50px" width="400px" justifyContent="center">
@@ -30,7 +31,9 @@ function Donation(){
           </Flex>
         </Flex>
       </Flex>
-    </>
+      <Spacer />
+      <Footer />
+    </Flex>
   )
     
 }

@@ -3,7 +3,7 @@ import SearchBar from './Searchbar';
 import youtube from '../apis/youtube';
 import VideoList from './VideoList';
 import Navbar from './Navbar';
-import { Box } from '@chakra-ui/react';
+import { Box, Flex, Spacer } from '@chakra-ui/react';
 import '../style/index.css';
 import Footer from './Footer';
 import ContactMe from './ContactMe';
@@ -31,15 +31,16 @@ class App extends React.Component {
     }
     render() {
         return (
-                <>
+                <Flex direction="column" height="100vh">
                     <Box>
                     <Navbar />
                     <SearchBar handleFormSubmit={this.handleSubmit}/>
                     <ContactMe />
                     <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
                     </Box>
-                    <Footer />
-                </>
+                    <Spacer />
+                    <Footer alignSelf="end" />
+                </Flex>
 
         )
     }
