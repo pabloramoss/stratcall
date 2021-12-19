@@ -32,12 +32,12 @@ class App extends React.Component {
     render() {
         return (
                 <Flex direction="column" height="100vh">
-                    <Box>
+                    <Box pb="50px">
                     <Navbar />
                     <SearchBar handleFormSubmit={this.handleSubmit}/>
                     <ContactMe />
                     <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
-                    </Box>
+                    </Box >
                     <Spacer />
                     <Footer alignSelf="end" />
                 </Flex>

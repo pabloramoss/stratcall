@@ -16,7 +16,7 @@ import { Link as RouterLink } from "react-router-dom";
 export default function Navbar(){
 
   return (
-    <Flex backgroundColor="#FF4455" position="fixed" width="100vw" zIndex="100">
+    <Flex backgroundColor="#FF4455" position="fixed" width="100%" zIndex="100">
       <Link as={RouterLink} to="/" _hover={{textDecoration:"none"}}>
       <Heading color="white" as='h2' size='md' p="20px">VALO BRAIN</Heading>
       </Link>

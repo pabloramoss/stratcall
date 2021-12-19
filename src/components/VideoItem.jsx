@@ -15,7 +15,9 @@ import {
     Flex,
     Text,
     Image,
-    Heading
+    Heading,
+    Spacer,
+    AspectRatio
   } from '@chakra-ui/react'
 
 const VideoItem = ({video , handleVideoSelect}) => {
@@ -25,22 +27,24 @@ const VideoItem = ({video , handleVideoSelect}) => {
 
 
     return (
-        <Flex onClick={ () => handleVideoSelect(video)} pt="50px" className="video-image">
+        <Flex direction={{base:"column", md:"row"}} onClick={ () => handleVideoSelect(video)} pt="50px" className="video-image">
             <Box>
-                <Image onClick={onOpen} cursor="pointer" src={video.snippet.thumbnails.medium.url} alt={video.snippet.description} borderRadius={8}/>
-            </Box>
-            <Box width="600px" ps="30px">
-                <Heading color="white" onClick={onOpen} cursor="pointer" as='h2' fontSize="22px" pb="20px">{video.snippet.title}</Heading>
-                <Text color="white">{video.snippet.description}</Text>
+                <Image minWidth={{base:"100vw", md:"400px"}} onClick={onOpen} cursor="pointer" src={video.snippet.thumbnails.medium.url} alt={video.snippet.description} borderRadius={8}/>
+            </Box>  
+            <Box width={{base:"100%", md:"500px"}} ps="30px">
+                <Heading color="white" onClick={onOpen} cursor="pointer" as='h2' fontSize={{base:"15px", md:"22px"}} pt={{base:"20px", md:"0"}} pb={{base:"0", md:"20px"}}>{video.snippet.title}</Heading>
+                <Text display={{base:"none", md:"block"}} color="white">{video.snippet.description} </Text>
             </Box>
             <Modal isOpen={isOpen} size="xl" onClose={onClose}>
         <ModalOverlay />
-        <ModalContent maxW="940px" height="580px">
+        <ModalContent maxW="940px" pb="15px">
           <ModalHeader>{video.snippet.title}</ModalHeader>
           <ModalCloseButton />
         <Flex align="end">
-          <ModalBody>
-          <iframe width="900px" height="500px" src={videoSrc} allowFullScreen title="Video player" />
+          <ModalBody width={{sm:"400px", md:"600px", lg:"940px"}}>
+            <AspectRatio ratio={16 / 9}>
+              <iframe src={videoSrc} allowFullScreen title="Video player" />
+            </AspectRatio>
           </ModalBody>
         </Flex>
         </ModalContent>

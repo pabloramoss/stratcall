@@ -9,6 +9,6 @@ const VideoList = ({videos , handleVideoSelect}) => {
         // console.log(video.id);
     });
 
-    return <Box ms="100px">{renderedVideos}</Box>;
+    return <Box ms={{base:"0", md:"100px"}}>{renderedVideos}</Box>;
 };
 export default VideoList;

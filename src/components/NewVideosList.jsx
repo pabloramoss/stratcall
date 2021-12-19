@@ -28,7 +28,7 @@ const NewVideosList = () => {
   return (
     <Flex>
       <Box>
-      <AspectRatio maxW='560px' ratio={1}>
+      <AspectRatio maxW="560px" ratio={1}>
         <iframe
           title='naruto'
           src= {video1}
