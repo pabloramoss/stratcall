@@ -39,7 +39,7 @@ class App extends React.Component {
                     <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
                     </Box >
                     <Spacer />
-                    <Footer alignSelf="end" />
+                    <Footer />
                 </Flex>
 
         )

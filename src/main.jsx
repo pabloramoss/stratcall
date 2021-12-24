@@ -13,7 +13,7 @@ ReactDOM.render(
   <React.StrictMode>
       <ChakraProvider theme={theme}>
         <BrowserRouter>
-          <App />
+          <App bg="black"/>
         </BrowserRouter>
       </ChakraProvider>
   </React.StrictMode>,
