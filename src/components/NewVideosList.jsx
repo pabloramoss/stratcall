@@ -3,9 +3,7 @@ import axios from 'axios';
 import {
   Box,
   Heading,
-  Link,
   Flex,
-  Spacer,
   AspectRatio
 } from '@chakra-ui/react';
 

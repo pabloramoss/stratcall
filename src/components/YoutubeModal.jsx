@@ -13,7 +13,6 @@ import {
   Flex
 } from '@chakra-ui/react'
 import React, {useState} from 'react';
-import VideoList from './VideoList';
 
 function YoutubeModal({video}) {
   if (!video) {

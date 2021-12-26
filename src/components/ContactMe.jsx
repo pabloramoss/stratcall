@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Link, Button, Flex, Icon } from '@chakra-ui/react';
+import { Heading, Link, Button, Flex, Icon } from '@chakra-ui/react';
 import {FaTwitter} from "react-icons/fa";
 
 

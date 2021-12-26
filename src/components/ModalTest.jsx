@@ -3,18 +3,14 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  Button,
   Box,
-  Stack,
   Flex,
   Text
 } from '@chakra-ui/react'
 import React, {useState} from 'react';
-import VideoList from './VideoList';
 
 function ModalTest() {
   const percop = function (){

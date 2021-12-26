@@ -9,14 +9,11 @@ import {
     ModalBody,
     ModalCloseButton,
     useDisclosure,
-    Button,
     Box,
-    Stack,
     Flex,
     Text,
     Image,
     Heading,
-    Spacer,
     AspectRatio
   } from '@chakra-ui/react'
 

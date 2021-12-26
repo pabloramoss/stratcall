@@ -1,13 +1,11 @@
 import React, {useState} from 'react';
 import {
-  Box,
   Heading,
   Flex,
   Spacer,
   Link,
   IconButton
 } from '@chakra-ui/react';
-import Donation from './Donation';
 import { Link as RouterLink } from "react-router-dom";
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 
