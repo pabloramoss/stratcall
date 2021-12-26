@@ -7,6 +7,7 @@ import { Box, Flex, Spacer } from '@chakra-ui/react';
 import '../style/index.css';
 import Footer from './Footer';
 import ContactMe from './ContactMe';
+import PokeApiPrueba from './PokeApiPrueba';
 
 
 class App extends React.Component {
@@ -36,6 +37,7 @@ class App extends React.Component {
                     <Navbar />
                     <SearchBar handleFormSubmit={this.handleSubmit}/>
                     <ContactMe />
+                    <PokeApiPrueba />
                     <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
                     </Box >
                     <Spacer />
