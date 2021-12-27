@@ -6,9 +6,8 @@ import Home from './Home'
 import ContactSection from './ContactSection';
 
 
-class App extends React.Component {
+const App = ()=> {
 
-    render() {
         return (
                 <>
                     <Routes>
@@ -17,9 +16,7 @@ class App extends React.Component {
                         <Route path="donation" element={<Donation />} />
                     </Routes>
                 </>
-
         )
     }
-}
 
 export default App;

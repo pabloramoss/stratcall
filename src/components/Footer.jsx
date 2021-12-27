@@ -3,7 +3,7 @@ import { Link, Flex, Heading } from '@chakra-ui/react';
 import SocialMedia from "./SocialMedia";
 
 
-function Footer(){
+const Footer = () => {
 
   return (
     <Flex direction="column" justifyContent="center" py="40px" bgColor="#111111">

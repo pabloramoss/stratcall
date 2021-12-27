@@ -5,7 +5,6 @@ import {
     ModalOverlay,
     ModalContent,
     ModalHeader,
-    ModalFooter,
     ModalBody,
     ModalCloseButton,
     useDisclosure,
@@ -20,8 +19,6 @@ import {
 const VideoItem = ({video , handleVideoSelect}) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
-
-
 
     return (
         <Flex direction={{base:"column", md:"row"}} onClick={ () => handleVideoSelect(video)} pt="50px" className="video-image">

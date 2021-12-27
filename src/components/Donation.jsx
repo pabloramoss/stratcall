@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 
-function Donation(){
+const Donation = () => {
 
   return(
     <Flex direction="column" height="100vh">

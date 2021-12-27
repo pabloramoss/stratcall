@@ -2,7 +2,7 @@ import React from "react";
 import { Flex, Link, Icon } from '@chakra-ui/react';
 import { FaYoutube, FaTwitter, FaTiktok} from "react-icons/fa";
 
-function SocialMedia(){
+const SocialMedia = ()=> {
 
   return (
     <Flex justifyContent="center">

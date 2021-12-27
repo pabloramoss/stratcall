@@ -9,11 +9,7 @@ import {
 import { Link as RouterLink } from "react-router-dom";
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 
-
-
-
-
-export default function Navbar(){
+const Navbar = ()=> {
   const [display, setDisplay] = useState("none");
 
   return (
@@ -57,3 +53,5 @@ export default function Navbar(){
   );
 
 };
+
+export default Navbar

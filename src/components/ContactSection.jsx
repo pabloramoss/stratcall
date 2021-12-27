@@ -5,7 +5,7 @@ import Footer from './Footer';
 import ContactMe from './ContactMe';
 
 
-export default function ContactSection() {
+const ContactSection = ()=> {
   return (
     <Flex direction="column" height="100vh">
       <Navbar />
@@ -17,3 +17,4 @@ export default function ContactSection() {
     </Flex>
   )
 }
+export default ContactSection

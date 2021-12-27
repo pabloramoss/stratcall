@@ -5,7 +5,8 @@ import {
     FormControl,
     FormHelperText,
     Input,
-    Button
+    Button,
+    Box
   } from '@chakra-ui/react';
   import { SearchIcon } from '@chakra-ui/icons'
 
@@ -37,8 +38,6 @@ class Searchbar extends React.Component {
                     </FormControl>
                 </form>
             </Flex>
-                
-            
         )
     }
 }
