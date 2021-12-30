@@ -6,9 +6,7 @@ import Navbar from './Navbar';
 import { Box, Flex, Spacer } from '@chakra-ui/react';
 import '../style/index.css';
 import Footer from './Footer';
-import ContactMe from './ContactMe';
-
-
+import AppSpecs from './AppSpecs';
 class App extends React.Component {
     state = {
         videos: [],

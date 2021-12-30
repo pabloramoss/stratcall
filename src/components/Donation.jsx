@@ -11,7 +11,7 @@ const Donation = () => {
       <Navbar />
       <Flex pt="150px" justifyContent="center">
         <Flex direction="column" justifyContent="center" alignItems="center" my="50px" bgColor="white" width="65vw" height="400px" borderRadius="30px">
-          <Text fontSize={{base:"11px",md:"15px"}}width="60vw">Si quieres apoyar a Valo Brain puedes hacerlo a través de donaciones mediante MercadoPago (Argentina) o con Paypal.
+          <Text fontSize={{base:"11px",md:"15px"}} px="20px">Si quieres apoyar a Valo Brain puedes hacerlo a través de donaciones mediante MercadoPago (Argentina) o con Paypal.
           </Text>
           <Heading textAlign="center" mt="30px" fontSize={{base:"15px",md:"20px"}}>Muchas gracias por pasarte!</Heading>
           <Flex direction={{base:"column", md:"row"}} my="50px" width="450px" alignItems="center" justifyContent="center">
