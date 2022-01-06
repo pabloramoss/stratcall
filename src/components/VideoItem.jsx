@@ -1,5 +1,4 @@
 import React from 'react';
-import '../style/video.css';
 import {
     Modal,
     ModalOverlay,
@@ -23,10 +22,10 @@ const VideoItem = ({video , handleVideoSelect}) => {
     return (
         <Flex direction={{base:"column", md:"row"}} onClick={ () => handleVideoSelect(video)} pt="50px" className="video-image">
             <Box>
-                <Image minWidth={{base:"100vw", md:"400px"}} onClick={onOpen} cursor="pointer" src={video.snippet.thumbnails.medium.url} alt={video.snippet.description} borderRadius={8}/>
+                <Image minWidth={{base:"100vw", md:"400px"}} onClick={onOpen} cursor="pointer" src={video.snippet.thumbnails.medium.url} alt={video.snippet.description} />
             </Box>  
             <Box width={{base:"100%", md:"500px"}} ps="30px">
-                <Heading color="white" onClick={onOpen} cursor="pointer" as='h2' fontSize={{base:"15px", md:"22px"}} pt={{base:"20px", md:"0"}} pb={{base:"0", md:"20px"}}>{video.snippet.title}</Heading>
+                <Heading color="white" onClick={onOpen} cursor="pointer" as='h2' fontSize={{base:"15px", md:"22px"}} pt={{base:"5px", md:"0"}} pb={{base:"0", md:"20px"}}>{video.snippet.title}</Heading>
                 <Text display={{base:"none", md:"block"}} color="white">{video.snippet.description} </Text>
             </Box>
             <Modal isOpen={isOpen} size="xl" onClose={onClose}>
