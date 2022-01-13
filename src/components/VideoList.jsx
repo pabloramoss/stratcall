@@ -4,6 +4,7 @@ import { Box } from '@chakra-ui/react'
 
 
 const VideoList = ({videos , handleVideoSelect}) => {
+    console.log("estos son los videos que recibe videlist: ",videos)
     const renderedVideos =  videos.map((video) => {
         return <VideoItem key={video.id.videoId} video={video} handleVideoSelect={handleVideoSelect} />
         // console.log(video.id);

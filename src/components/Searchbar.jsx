@@ -1,44 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     InputGroup,
     Flex,
     FormControl,
-    FormHelperText,
     Input,
     Button,
-    Box
   } from '@chakra-ui/react';
   import { SearchIcon } from '@chakra-ui/icons'
 
 
-class Searchbar extends React.Component {
-    handleChange = (event) => {
-        this.setState({
+const Searchbar = (props)=> {
+	const [search, setSearch] = useState("")
+    const handleChange = (event) => {
+        setSearch({
             term: event.target.value
         });
     
     };
-    handleSubmit = event => {
+    const handleSubmit = event => {
         event.preventDefault();
-        this.props.handleFormSubmit(this.state.term);
+		props.handleFormSubmit(search.term)
+        console.log("enviando", search.term)
     }
-
-    render() {
         
-        return (
-            <Flex justifyContent="center" pt="100px">
-                <form onSubmit={this.handleSubmit}>
-                    <FormControl>
-                        <InputGroup>
-                            <Input color="white" type='text' onChange={this.handleChange} placeholder="Buscar" />
-                            <Button type="submit"><SearchIcon w={6} h={6} /></Button>
-                        </InputGroup>
-                        <FormHelperText>Busca la micro por agente, equipo, habilidad o mapa</FormHelperText>
-                        
-                    </FormControl>
-                </form>
-            </Flex>
-        )
-    }
+    return (
+        <Flex justifyContent="center" pt="100px">
+            <form onSubmit={handleSubmit}>
+                <FormControl>
+                    <InputGroup>
+                        <Input color="white" type='text' onChange={handleChange} placeholder="Buscar" />
+                        <Button type="submit"><SearchIcon w={6} h={6} /></Button>
+                    </InputGroup>                        
+                </FormControl>
+            </form>
+        </Flex>
+    )
 }
 export default Searchbar;
