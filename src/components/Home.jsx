@@ -1,41 +1,31 @@
-import React, {useState} from 'react';
-import SearchBar from './Searchbar';
-import youtube from '../apis/youtube';
-import VideoList from './VideoList';
+import React,{useContext} from 'react';
 import Navbar from './Navbar';
-import { Box, Flex, Spacer } from '@chakra-ui/react';
-import '../style/index.css';
-import Footer from './Footer';
-import axios from "axios"
-
+import { Stack, Grid, Box } from '@chakra-ui/react';
+import VideosContext from '../context/VideoContext';
+import Body from './Body';
 
 const App = ()=> {
-    const [videos, setVideos] = useState([])
-    const [selectedVideos, setSelectedVideos] = useState(null)
-
-    const handleSubmit = async (termFromSearchBar) =>{
-    const response = await youtube.get('/search',{
-        params: {
-        q: termFromSearchBar
-        }
-    })
-    setVideos(response.data.items)
-    console.log("response", videos)
-    }
-    const handleVideoSelect = (video) =>{
-        setSelectedVideos(video)
-    } //ver esta funcion que creo que no hace nada
+    const { videos } = useContext(VideosContext);
 
     return (
-            <Flex direction="column" height="100vh">
-                <Box pb="50px">
-                <Navbar />
-                <SearchBar handleFormSubmit={handleSubmit}/>
-                <VideoList handleVideoSelect={handleVideoSelect} videos={videos}/>
-                </Box >
-                <Spacer />
-                <Footer />
-            </Flex>
+        <Grid 
+        gridTemplateAreas={{
+          base: `
+          "header header" 
+          "body body"`, 
+          sm: `
+          "header header" 
+          "body body"` 
+          }} 
+          gridTemplateColumns={{base:"60px 1fr"}} gridTemplateRows={{base: "60px 1fr"}}
+        >
+        <Box gridArea="header">
+          <Navbar />
+        </Box>
+        <Stack gridArea="body">
+          <Body />
+        </Stack>
+      </Grid>
     )
 }
 

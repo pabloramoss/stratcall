@@ -1,39 +1,45 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {
-    InputGroup,
+    Stack,
     Flex,
-    FormControl,
     Input,
     Button,
   } from '@chakra-ui/react';
-  import { SearchIcon } from '@chakra-ui/icons'
+import { SearchIcon } from '@chakra-ui/icons'
+import VideosContext from '../context/VideoContext';
+import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react';
 
+function Searchbar() {
+    const [search, setSearch] = useState("");
+    const [displayInput, setDisplayInput] = useState("flex");
+    const { youtubeSearch } = useContext(VideosContext);
+    const location = useLocation();
+    useEffect(()=>{
+        if(location.pathname!=="/") {
+            setDisplayInput("none")
+        }
+    },[])
 
-const Searchbar = (props)=> {
-	const [search, setSearch] = useState("")
     const handleChange = (event) => {
         setSearch({
             term: event.target.value
         });
-    
     };
     const handleSubmit = event => {
         event.preventDefault();
-		props.handleFormSubmit(search.term)
-        console.log("enviando", search.term)
-    }
-        
+        youtubeSearch(search.term);
+    };
+
     return (
-        <Flex justifyContent="center" pt="100px">
+        <Stack>
             <form onSubmit={handleSubmit}>
-                <FormControl>
-                    <InputGroup>
-                        <Input color="white" type='text' onChange={handleChange} placeholder="Buscar" />
-                        <Button type="submit"><SearchIcon w={6} h={6} /></Button>
-                    </InputGroup>                        
-                </FormControl>
+                <Flex display={displayInput}>
+                    <Input minW={{base: "auto", lg: "500px"}} color="white" type='text' onChange={handleChange} placeholder="Buscar" />
+                    <Button type="submit"><SearchIcon w={6} h={6} /></Button>
+                </Flex>
             </form>
-        </Flex>
-    )
+        </Stack>
+    );
 }
 export default Searchbar;

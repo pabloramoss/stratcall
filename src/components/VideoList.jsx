@@ -1,15 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import VideoItem from './VideoItem';
-import { Box } from '@chakra-ui/react'
+import { Stack, Heading } from '@chakra-ui/react'
+import VideosContext from '../context/VideoContext';
 
+const VideoList = () => {
+    const { videos } = useContext(VideosContext);
 
-const VideoList = ({videos , handleVideoSelect}) => {
-    console.log("estos son los videos que recibe videlist: ",videos)
-    const renderedVideos =  videos.map((video) => {
-        return <VideoItem key={video.id.videoId} video={video} handleVideoSelect={handleVideoSelect} />
-        // console.log(video.id);
-    });
-
-    return <Box ms={{base:"0", md:"100px"}}>{renderedVideos}</Box>;
+    return (    
+        <Stack spacing={6} mt={30}>
+            <Heading color="white" fontSize={25} fontWeight={600} opacity={0.6}>{videos.length} videos</Heading>
+            <Stack  mb={30} pb={100}>
+            {videos.map(video => <VideoItem key={video.id.videoId} video={video} />)}
+            </Stack>
+        </Stack>);
 };
 export default VideoList;
