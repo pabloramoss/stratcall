@@ -1,8 +1,8 @@
 import React from 'react';
 import {Container, Heading, Icon, Stack} from "@chakra-ui/react"
-import Cardtest from './Cardtest';
 import { FaChevronLeft, FaChevronRight, } from 'react-icons/fa';
 import getLatestVideos from "../apis/getLatestVideos"
+import VideoCard from './VideoCard';
 
 const RecentVideos = ()=> {
   const latestVideos = getLatestVideos()
@@ -23,7 +23,7 @@ const RecentVideos = ()=> {
         },
       }}>
         <Stack spacing={5} direction="row">
-          {latestVideos.map(item=> <Cardtest key={item.videoId} video={item} />)}
+          {latestVideos.map(item=> <VideoCard key={item.videoId} video={item} />)}
         </Stack>
         
       </Container>
