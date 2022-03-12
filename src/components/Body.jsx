@@ -4,6 +4,7 @@ import Hero from "./Hero"
 import VideoList from './VideoList';
 import VideosContext from '../context/VideoContext';
 import RecentVideos from './RecentVideos';
+import Footer from "./Footer"
 
 const Body = ()=> {
   const {videos} = useContext(VideosContext)
@@ -20,6 +21,9 @@ const Body = ()=> {
           :
           <RecentVideos />
       }
+      <Stack w="100%">
+        <Footer />
+      </Stack>
     </Stack>
   )
 }

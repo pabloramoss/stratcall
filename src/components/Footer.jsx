@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <Flex direction="column" justifyContent="center" py="40px" bgColor="#111111">
-      <Link href="#top" _hover={{textDecoration:"none"}} my="20px">
+      <Link href="https://valobrain.vercel.app/" _hover={{textDecoration:"none"}} my="20px">
         <Heading color="white" textAlign="center" size="md">VALO BRAIN</Heading>
       </Link>
       <SocialMedia />

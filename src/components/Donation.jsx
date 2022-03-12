@@ -17,8 +17,8 @@ const Donation = () => {
           <Flex direction={{base:"column", md:"row"}} my="50px" width="450px" alignItems="center" justifyContent="center">
             <Link href="https://www.paypal.com/donate/?hosted_button_id=5GLARW66EJFF8" target="_blank">
               <Flex alignItems="center">
-                <Image height="30px" src="public/icon-worldwide.png"  alt="Icono Worldwide" />
-                <Image ms="20px" height={{base:"30px",md:"60px"}} src="public/boton-paypal.png"  alt="Donar con boton de Paypal" />
+                <Image height="30px" src="/icon-worldwide.png"  alt="Icono Worldwide" />
+                <Image ms="20px" height={{base:"30px",md:"60px"}} src="/boton-paypal.png"  alt="Donar con boton de Paypal" />
               </Flex>
             </Link>
             <Spacer />
