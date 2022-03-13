@@ -5,7 +5,7 @@ import {FaShare} from "react-icons/fa";
 const Hero = ()=> {
 
   return(
-    <Stack h="350px" w="100%" backgroundImage={{base:"valobrainBannerSquare.jpg", md:"valobrainBanner.jpg"}} backgroundPosition="center" backgroundRepeat="no-repeat" backgroundSize="100%">
+    <Stack h="350px" w="100%" backgroundImage={{base:"/valobrainBannerMobile.jpg", md:"/valobrainBanner.jpg"}} backgroundPosition="center" backgroundRepeat="no-repeat" backgroundSize="100%">
       <Stack maxW={500} spacing={10} height="100%" justifyContent="space-around" ps={10}>
         <Heading zIndex={3} color="white" fontSize={{base:"lg", md:"2xl"}} fontWeight={{base:700, md:800}}>Encuentra la micro strat en función del agente, mapa o habilidad.</Heading>
         <Stack display={{base: "none", md:"flex"}}>

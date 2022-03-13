@@ -6,7 +6,7 @@ const VideoCard = ({video})=> {
   const videoSrc = `https://www.youtube.com/embed/${video.videoId}`;
 
   return(
-    <Stack minW={250} spacing={4} rounded={10} p={2} boxShadow="xl" border="solid white 1px" justifyContent="space-around">
+    <Stack minW={250} spacing={4} rounded={10} p={2} boxShadow="xl" border="solid gray 1px" justifyContent="space-around">
       <Image 
         rounded={10}            
         src={video.thumbnails} 
